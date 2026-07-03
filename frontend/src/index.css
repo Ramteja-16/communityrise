@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #09090b;
+    --text-main: #ffffff;
+    --accent-green: #10b981;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Zero Gradients - Sharp high-contrast aesthetic */
+.btn-primary {
+  @apply bg-brand-green text-black font-semibold px-4 py-2 rounded-md hover:bg-brand-greenHover transition-all duration-150 active:scale-[0.98] disabled:opacity-50 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-zinc-800 text-white font-medium px-4 py-2 rounded-md hover:bg-zinc-700 transition-all duration-150 border border-zinc-700 active:scale-[0.98] flex items-center justify-center gap-2;
+}
+
+.btn-outline {
+  @apply bg-transparent text-zinc-300 font-medium px-4 py-2 rounded-md border border-zinc-700 hover:border-brand-green hover:text-brand-green transition-all duration-150 flex items-center justify-center gap-2;
+}
+
+.card-minimal {
+  @apply bg-zinc-900/90 border border-zinc-800 rounded-lg p-5 hover:border-zinc-700 transition-all duration-200;
+}
+
+.badge-green {
+  @apply bg-emerald-950/80 text-emerald-400 border border-emerald-800/80 text-xs px-2.5 py-0.5 rounded-full font-mono font-medium;
+}
+
+.badge-paid {
+  @apply bg-zinc-800 text-white border border-zinc-600 text-xs px-2.5 py-0.5 rounded-full font-mono font-medium;
+}
+
+.badge-civic {
+  @apply bg-amber-950/80 text-amber-400 border border-amber-800/80 text-xs px-2.5 py-0.5 rounded-full font-mono font-medium;
+}
+
+.badge-status {
+  @apply bg-zinc-900 text-zinc-300 border border-zinc-700 text-xs px-2.5 py-0.5 rounded-full font-mono;
+}
